@@ -1,0 +1,12 @@
+baseURL = "https://tnayuki.github.io/"
+author = "tnayuki"
+languageCode = "ja-jp"
+title = "tnayuki"
+theme = "black-and-light"
+
+[params]
+  sitename = "tnayuki"
+
+[[menu.main]]
+    name = "Twitter"
+    url  = "https://twitter.com/tnayuki"

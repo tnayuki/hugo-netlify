@@ -1,0 +1,32 @@
+{{ partial "header.html" . }}
+
+<video width="720" height="480" autoplay controls>
+  <source src="/videos/{{ .Params.video }}.mp4" type="video/mp4">
+  <source src="/videos/{{ .Params.video }}.webm" type="video/webm">
+</video>
+
+<section id=content>
+  <h1>{{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}</h1>
+  <div id=technologies>with {{ delimit .Params.technologies ", " ", and "}}</div>
+
+  <div id=sub-header>
+    {{ .Date.Format (.Site.Params.dateform | default "January 2006") }}
+  </div>
+
+  <div class="entry-content">
+    {{ .Content }}
+  </div>
+
+  <div id=links>
+    {{ if .PrevInSection }}
+      <a class="basic-alignment left" href="{{.PrevInSection.Permalink}}">&laquo; {{.PrevInSection.Title}}</a>
+    {{ end }}
+    {{ if .NextInSection }}
+      <a class="basic-alignment left" href="{{.NextInSection.Permalink}}">{{.NextInSection.Title}} &raquo;</a>
+    {{ end }}
+  </div>
+</section>
+
+{{ partial "footer.html" . }}
+
+
