@@ -3,6 +3,7 @@ author = "tnayuki"
 languageCode = "ja-jp"
 title = "tnayuki"
 theme = "black-and-light"
+googleAnalytics = "UA-48560528-2"
 
 [params]
   sitename = "tnayuki"
