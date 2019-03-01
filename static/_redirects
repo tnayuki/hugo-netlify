@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://tnayuki.netlify.com/* https://tnayuki.dev/:splat 301!
